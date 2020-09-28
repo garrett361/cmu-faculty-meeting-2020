@@ -1,0 +1,16 @@
+\documentclass[crop,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+
+%Call with pdflatex --shell-escape to simultaneously produce pdf and svg.  Can configure texmaker to do this automatically
+
+%Import custom tikzlines.sty file which loads tikz, additional tikz-dependencies and defines custom curves styles
+\usepackage{tikzlines}
+
+
+\begin{document}
+    \begin{tikzpicture}
+    
+
+\node at (0,0) [line width=.8pt,minimum size=.5cm](vertex) {$I[g_{\mu\nu},A_{\mu},\ldots]=\int \rd^{4}x\,\sqrt{-g}\left(\frac{\MP^{2}}{2}R+\Lambda+\alpha R^{\mu\nu}R_{\mu\nu}R+\beta F_{\mu\nu}F^{\mu\nu}R^{2}+\ldots\right)$};
+    
+    \end{tikzpicture}
+\end{document}

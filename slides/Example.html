@@ -1,0 +1,107 @@
+<section id="example-0">
+    <h1 class="no-caps title">
+        Example
+    </h1>
+
+</section>
+
+<section id="example-1">
+    <h2 class="no-caps title">
+        Basic Example: Ideal Gas
+    </h2>
+
+    <p>2D ideal gas w/ \(N\) particles: \(H=\sum_i \frac{p_i^2}{2m}\).  Here, \(\Qvec=\{N,L\}\)</p>
+
+    <img width="30%" src="slides/figures/2DGas.svg">
+
+    <p>Basic Thermodynamic relations:</p>
+
+    <div>
+        \[
+        M_0(N,T)=NT \quad S_0(N,T)\approx N\left(\ln (2\pi T m L^2)+2)\right)
+        \]
+    </div>
+
+    <p>Clearly, energy is bounded by zero</p>
+
+    <div>
+        \[
+        M(N,T)>M_{\rm ext}^{0}(N)=0
+        \]
+    </div>
+
+
+</section>
+
+
+<section id="example-2">
+    <h2 class="no-caps title">
+        Basic Example: Ideal Gas \(\Delta M_{\rm ext}(N)\)
+    </h2>
+
+    <p>
+        Curve the disk: \(H\longrightarrow H-\lambda\left(1-\frac{r^2}{L^2}\right)\)
+    </p>
+
+    <img width="30%" src="slides/figures/2DGasDipLambda.svg">
+
+    <p>
+        Particles sit at bottom of well at \( T=0\)
+    </p>
+
+    <p>
+        Minimium energy is shifted by \(-N\lambda\)
+    </p>
+
+    <div>
+        \[
+        M(N,T)> M_{\rm ext}^{0}(N)+\Delta M_{\rm ext}(N)\quad \bbox[5px, border: 2px solid red]{\Delta M_{\rm ext}(N)=-N\lambda}
+        \]
+    </div>
+
+
+</section>
+
+
+
+<section id="example-3">
+    <div class="vert-align">
+        <img   width="20%" src="slides/figures/2DGasDipLambda.svg">
+
+    <h2 class="no-caps title">
+         Ideal Gas \(\Delta S(M,N)\)
+    </h2>
+    </div>
+    
+
+    
+    <p class="top-margin-reduced bottom-margin-reduced">
+        Consider a state \((M,N)\) which is slightly perturbed, \(\Delta T\ll T_0\).  Find:
+    </p>
+
+   
+    
+
+    <div class="shrink-80">
+        \[
+        T(M,N)=\frac{M}{N}\left(1+\frac{N\lambda}{2M}+\ldots\right)\quad \Delta S(M,N)=\frac{N^2\lambda}{2M}\left(1-\frac{N\lambda}{6}+\ldots\right)
+        \] 
+    </div>
+
+    <p class="top-margin-reduced bottom-margin-reduced">
+        Inspecting above and \(\Delta M_{\rm ext}(N)=-N\lambda\):
+    </p>
+
+    <div class="shrink-80">
+        \[
+            \bbox[5px, border: 2px solid red]{\Delta M_{\rm ext}(N)=-T(M,N)\Delta S(M,N)\left(1-\frac{\Delta T}{T_0}+\ldots\right)}
+        \] 
+    </div>
+
+    <p>
+        <hlight>I will argue that such results are generic:</hlight> \(\Delta M_{\rm ext}\approx -T\Delta S \)
+    </p>
+    
+
+</section>
+

@@ -1,0 +1,28 @@
+\documentclass[crop,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+
+%Call with pdflatex --shell-escape to simultaneously produce pdf and svg.  Can configure texmaker to do this automatically
+
+%Import custom tikzlines.sty file which loads tikz, additional tikz-dependencies and defines custom curves styles
+\usepackage{tikzlines}
+
+
+\begin{document}
+    \begin{tikzpicture}
+    
+\draw[->,line width=1pt] (0,.2)--(5,.2) node[right]{Unperturbed};
+\draw[jagged,line width=1pt] (0,.2)--(1.5,.2);
+
+\draw[->,line width=1pt] (0,-.2)--(5,-.2) node[right]{Perturbed};
+\draw[jagged,line width=1pt] (0,-.2)--(1,-.2);
+
+\node at (3.5,.6) {$M$};
+
+\draw[line width=.5pt,dashed] (1,0)--(1,-.8) node[below, inner sep=2pt,yshift=2pt]{$M_{\rm ext}(\Q,\epsilon)$};
+
+\draw[line width=.5pt,dashed] (1.5,0)--(1.5,.8) node[above, inner sep=2pt,yshift=0pt]{$M_{\rm ext}^{0}(\Q)$};
+
+
+\draw (1,-.2) [fill,color=blue,opacity=.5] ellipse (.1 and .1);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass[crop,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+
+%Call with pdflatex --shell-escape to simultaneously produce pdf and svg.  Can configure texmaker to do this automatically
+
+%Import custom tikzlines.sty file which loads tikz, additional tikz-dependencies and defines custom curves styles
+\usepackage{tikzlines}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\begin{scope}
+
+
+%\node at (-2,0) [minimum size=2cm] () {$\mathcal{A}_{\gamma\gamma\to \gamma\gamma}\supset$};
+
+\node at (-1.7,-1.2) [minimum size=.3cm] () {$\gamma$};
+\node at (0,-.8) [minimum size=.3cm] () {$e$};
+
+\node at (-.5,-.5) [smalldot, minimum size = .1cm] (vertexBL) {};
+\node at (.5,-.5) [smalldot, minimum size = .1cm] (vertexBR) {};
+\node at (-.5,.5) [smalldot, minimum size = .1cm] (vertexTL) {};
+\node at (.5,.5) [smalldot, minimum size = .1cm] (vertexTR) {};
+
+\coordinate  (BL) at ([shift=({-135:1.5})]vertexBL) {};
+\coordinate  (BR) at ([shift=({-45:1.5})]vertexBR) {};
+\coordinate  (TL) at ([shift=({135:1.5})]vertexTL) {};
+\coordinate  (TR) at ([shift=({45:1.5})]vertexTR) {};
+
+\path[]
+
+(BL) edge[photonborder,line width=2 pt] node  {} (vertexBL)
+(BL) edge[photon,line width=1.2 pt] node  {} (vertexBL)
+(TL) edge[photonborder,line width=2 pt] node  {} (vertexTL)
+(TL) edge[photon,line width=1.2 pt] node  {} (vertexTL)
+(TR) edge[photonborder,line width=2 pt] node  {} (vertexTR)
+(TR) edge[photon,line width=1.2 pt] node  {} (vertexTR)
+(BR) edge[photonborder,line width=2 pt] node  {} (vertexBR)
+(BR) edge[photon,line width=1.2 pt] node  {} (vertexBR)
+(vertexBL) edge[electron,draw, line width=1.2pt] (vertexTL)
+(vertexTL) edge[electron,draw, line width=1.2pt] (vertexTR)
+(vertexTR) edge[electron,draw, line width=1.2pt] (vertexBR)
+(vertexBR) edge[electron,draw, line width=1.2pt] (vertexBL);
+
+
+
+\end{scope}
+
+
+
+\begin{scope}[xshift=5cm]
+
+\draw[-latex',line width=1.0pt] (-3.5,0)--(-1.5,0);
+
+\node at (-1,-.5) [minimum size=.3cm] () {$\gamma$};
+
+%\node at (0,-2) [minimum size=.1cm] () {$\Delta\mathcal{L}=\frac{2}{45}\frac{e^{4}}{(16\pi)^{2}m^{4}}\left (7(F\tilde{F})^{2}+4F^{4}\right )$};
+
+
+\node at (0,0) [vertex, minimum size = .25cm] (vertex) {};
+
+\coordinate  (BL) at ([shift=({-135:1.5})]vertex) {};
+\coordinate  (BR) at ([shift=({-45:1.5})]vertex) {};
+\coordinate  (TL) at ([shift=({135:1.5})]vertex) {};
+\coordinate  (TR) at ([shift=({45:1.5})]vertex) {};
+
+\path[]
+
+(BL) edge[photonborder,line width=2 pt] node  {} (vertex)
+(BL) edge[photon,line width=1.2 pt] node  {} (vertex)
+(TL) edge[photonborder,line width=2 pt] node  {} (vertex)
+(TL) edge[photon,line width=1.2 pt] node  {} (vertex)
+(TR) edge[photonborder,line width=2 pt] node  {} (vertex)
+(TR) edge[photon,line width=1.2 pt] node  {} (vertex)
+(BR) edge[photonborder,line width=2 pt] node  {} (vertex)
+(BR) edge[photon,line width=1.2 pt] node  {} (vertex)
+(vertex) edge[electron,draw, line width=1.2pt] (vertex)
+(vertex) edge[electron,draw, line width=1.2pt] (vertex)
+(vertex) edge[electron,draw, line width=1.2pt] (vertex)
+(vertex) edge[electron,draw, line width=1.2pt] (vertex);
+
+
+
+\end{scope}
+	
+	
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,200 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- For responding to the user browser size.  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Garrett Goon - Edinburgh-EMPG, May 2020</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+
+    <!-- Importing fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Lato&display=swap" rel="stylesheet">
+
+
+    <!-- Using custom stylesheet below.  Not sure what reset and reveal.css are needed for (default values?)-->
+    <link rel="stylesheet" href="css/theme/goon.css">
+
+
+    <!-- used to avoid issues w/ the footer title.  Commented out, since it doesn't look very good. -->
+    <!-- <link rel="stylesheet" href="plugin/title-footer/title-footer.css"> -->
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+
+            <section data-external="slides/Title.html"> </section>
+
+            <section data-external="slides/Introduction.html"> </section>
+
+            <section data-external="slides/Example.html"> </section>
+
+            <section data-external="slides/Goals.html"> </section>
+
+            <section data-external="slides/EFTAndWGC.html"> </section>
+
+            <section data-external="slides/ChargedBHs.html"> </section>
+
+            <section data-external="slides/Proof.html"> </section>
+
+            <section data-external="slides/AdSCheck.html"> </section>
+
+            <section data-external="slides/Approximations.html"> </section>
+
+            <section data-external="slides/Implications.html"> </section>
+
+            <section data-external="slides/Conclusions.html"> </section>
+
+            <section data-external="slides/Additional.html"> </section>
+
+
+
+        </div> <!-- slides -->
+    </div> <!-- Reveal -->
+
+    <script src="js/reveal.js"></script>
+
+    <!-- For showing the slide number in presentation mode -->
+    <script>
+        Reveal.configure({ slideNumber: 'c/t' });
+        Reveal.configure({ showSlideNumber: 'speaker' });
+    </script>
+
+
+
+    <script>
+
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+
+            navigationMode: 'linear', // Step through slides top to bottom, left to right. Prevents skipping through vertical slide stacks accidentally by hitting right
+
+
+            transition: 'none', // none/fade/slide/convex/concave/zoom
+
+            // Controlling the size of the presentation
+
+            width: "90%",
+            height: "95%",
+            // Factor of the display size that should remain empty around the content
+            margin: 0,
+
+            // Bounds for smallest/largest possible scale to apply to content
+            minScale: 1,
+            maxScale: 1,
+
+            viewDistance: 300, // Number of slides away from the current that are visible
+            mobileViewDistance: 2,
+
+            hash: true,
+
+            math: {
+                src: 'plugin/MathJax/MathJax.js',
+                config: 'TeX-AMS_HTML-full', // See http://docs.mathjax.org/en/latest/config-files.html
+                // pass other options into `MathJax.Hub.Config()`
+                //Can define custom commands as follows:
+                TeX: {
+                    Macros: {
+                        Q: "{\\cal Q}",
+                        Qvec: "\\vec{\\cal Q}",
+                        mvec: "\\vec{\\mu}",
+                        rd: "{\\rm d}",
+                        MP: "M_{p}",
+                        nn: "\\nonumber \\\\",
+                    }
+                }
+            },
+
+
+            // // optional configurations for reveald3
+            reveald3: {
+
+                // If the previous slide is a slide further in the deck (i.e. we come back to
+                // slide from the next slide), by default the last fragment transition will be
+                // triggered to to get the last state of the visualization and simulate the
+                // the state the simulation was in when we left the slide. This can be
+                // discarded.
+                runLastState: true, //default true
+
+                // If a special onSlideChanged transition has been set (if for example the visualization
+                // has been preloaded using the data-preload attribute, and you want a specific transition
+                // to happen only when you arrive on the slide), you can choose the delay with which such 
+                // a transition will occur (note that in the case of no data-preload, if no delay is set then
+                // the transition might not occur since the iframe might not be fully loaded yet when the 
+                // function is triggered). // default 0. 
+                onSlideChangedDelay: 400,
+
+                // This will prefix the path attributes of the source html paths with the given path.
+                // (by default "src" if set to true or with the specified path if string)
+                mapPath: false, // default: false
+
+                // If true, will try to locate the file at a fallback url without the mapPath prefix in case no file is found
+                // at the stipulated url with mapPath
+                tryFallbackURL: false, //default false
+
+                // Checking for file existance has been reported to fail in rare 
+                // cases though files did exist. This option is to disable the file checking.
+                //see: https://github.com/gcalmettes/reveal.js-d3/issues/10
+                disableCheckFile: false, //default false,
+            },
+
+            // on-screen laser pointer config
+            notes_pointer: {
+                pointer: {
+                    size: 30,  // in pixels (scaled like the rest of reveal.js)
+                    color: 'rgba(255, 0, 0, 0.8)',  // something valid for css background-color
+                    key: 'A'
+                },
+                notes: {
+                    key: 'S'
+                }
+            },
+
+            // Reveal.js plugins
+            dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/highlight/highlight.js' },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/chart/Chart.min.js' },	// This and the below are for dynamic charts
+                { src: 'plugin/chart/csv2chart.js' },
+                { src: 'plugin/math/math.js', async: true }, // Math plugin for latex
+                { src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external]'); } }, // Plugin for importing slides as external files
+                { src: 'plugin/reveald3/reveald3.js' }, // Another package for d3js animations
+                { src: 'plugin/reveal.js-notes-pointer/notes-pointer.js', async: true }, // https://www.npmjs.com/package/reveal.js-notes-pointer
+
+                // { src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize("Title -- Garrett Goon -- ggoon@andrew.cmu.edu", "rgba(255,255,255,0.99)");   } }, // Plugin lets you put the title in the footer. Commented out; doesn't look great.
+
+            ]
+
+
+
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>

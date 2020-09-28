@@ -1,0 +1,770 @@
+/**
+ * Garrett Goon's modifications of the Beige theme for reveal.js.
+ *
+ * Original Beige Theme: Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #ffffff;
+  background-color: #ffffff; }
+ 
+  
+.reveal {
+  font-family: 'Lato', sans-serif;
+  font-size: 4.2vmin;
+  font-weight: normal;
+  color: #333; }
+
+::selection {
+  color: #fff;
+  background: rgba(79, 64, 28, 0.99);
+  text-shadow: none; }
+
+::-moz-selection {
+  color: #fff;
+  background: rgba(79, 64, 28, 0.99);
+  text-shadow: none; }
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+  /* Defining some custom colors */
+
+:root {
+  --cambridge-blue: rgba(163, 193, 173, 0.99);
+  --crimson-red: rgba(153, 0, 0, 0.99);
+  --cornell-blue: rgba(0,104,172,0.99);
+  --faded-grey: rgba(142, 147, 149, 0.99);
+  --dark-blue: rgba(54, 48, 82, 0.99);
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 2.8vmin 0;
+  color: #333;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 16vmin; }
+
+.reveal h2 {
+  font-size: 8vmin; }
+
+.reveal h3 {
+  font-size: 6vmin; }
+
+.reveal h4 {
+  font-size: 2.25vmin; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 2.8vmin 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+/* Custom style for text to be highlighted */
+
+.reveal hlight {
+  color: var(--cornell-blue);
+  font-weight: bold;
+}
+
+.reveal top {
+  font-weight: bold;
+}
+
+/* mostly default reveal.js beige css settings below */
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+
+  
+  /* stole code below to make numbers different colors in lists From : https://www.lockedownseo.com/ordered-list-ol-different-color-for-numbers/*/
+
+
+  /* Tell the list-items to not display numbers, but keep track of what the numbers should be */
+.reveal ol.colored li{
+  counter-increment: list;
+  list-style-type: none;
+  position: relative;
+}
+
+/* Output the numbers using the counter() function, but use a custom color, and position the numbers how we want */
+.reveal ol.colored li:before {
+  color: var(--crimson-red);
+  content: counter(list) ".";
+  left: -7vmin;
+  position: absolute;
+  text-align: right;
+  width: 4vmin;
+}
+
+
+
+
+
+/* same thing for unordered lists From: https://www.w3schools.com/howto/howto_css_bullet_color.asp*/
+
+.reveal ul.colored {
+  list-style: none; /* Remove default bullets */
+}
+
+.reveal ul.colored li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--crimson-red); /* Change the color */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+/* and for nested unordered lists (should really be avoided */
+
+.reveal ul.colored ul {
+  list-style: none; /* Remove default bullets */
+}
+
+.reveal ul.colored ul.colored li::before {
+  content: "\25B8";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--crimson-red); /* Change the color */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 5.5vmin; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  font-family: Gentium Book Basic, serif;
+  width: 70%;
+  margin: 2.8vmin auto;
+  padding: 0.7vmin;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0vmin 0vmin 1.4vmin rgba(0, 0, 0,.9); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 3vmin auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: vmin .7vmin 2vmin rgba(0, 0, 0, 0.15); }
+
+.reveal code {
+  font-family: monospace;
+  text-transform: none; }
+
+.reveal pre code {
+  display: block;
+  padding: 0.7vmin;
+  overflow: auto;
+  max-height: 50vmin;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 0.14vmin solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #c0a86e;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #564826; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 2.25vmin 0vmin;
+  border: 0;
+  box-shadow: none; }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #8b743d;
+  box-shadow: 0 0 2.8vmin rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: #8b743d; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--crimson-red);
+}
+
+.reveal .progress span {
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: #f7f3de; } }
+
+
+
+
+
+/*********************************************
+ * CSS for getting d3js visualizations to look nice; taken from reveald3
+ *********************************************/
+
+
+
+ section .row:before,
+ section .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ section .row {
+   margin: 0.15em 0em;
+ }
+ 
+ section .row *[class*='col-'] {
+   box-sizing: border-box;
+   position: relative;
+   left: 0;
+   float: left;
+   min-height: 0.14vmin;
+   padding: 0em 0.15em;
+ }
+ 
+ /*for tables*/
+ td {
+   font-size: 0.6em !important;
+   text-align: center !important;
+ }
+ th {
+   font-size: 0.7em !important;
+   text-align: center !important;
+ }
+ 
+ .table-vert td,
+ .table-vert th {
+   border-right: solid 0.14vmin #d2d2d2;
+   border-left: solid 0.14vmin #d2d2d2;
+ }
+ 
+ .table-leftalign td {
+   font-size: 0.6em !important;
+   text-align: left !important;
+ }
+ .table-leftalign th {
+   font-size: 0.6em !important;
+   text-align: left !important;
+ }
+ 
+ .no-top td,
+ .no-top th {
+   border-top:0 none !important;
+ }
+ .no-bottom td,
+ .no-bottom th {
+   border-bottom:0 none !important;
+ }
+ .vert-align td,
+ .vert-align th {
+   vertical-align: middle !important;
+ }
+ 
+ .col-05 { width: 0.5%; }
+ .col-1 { width: 1%; }
+ .col-2 { width: 2%; }
+ .col-3 { width: 3%; }
+ .col-4 { width: 4%; }
+ .col-5 { width: 5%; }
+ .col-6 { width: 6%; }
+ .col-7 { width: 7%; }
+ .col-8 { width: 8%; }
+ .col-9 { width: 9%; }
+ .col-10 { width: 10%; }
+ .col-11 { width: 11%; }
+ .col-12 { width: 12%; }
+ .col-13 { width: 13%; }
+ .col-14 { width: 14%; }
+ .col-15 { width: 15%; }
+ .col-16 { width: 16%; }
+ .col-17 { width: 17%; }
+ .col-18 { width: 18%; }
+ .col-19 { width: 19%; }
+ .col-20 { width: 20%; }
+ .col-21 { width: 21%; }
+ .col-22 { width: 22%; }
+ .col-23 { width: 23%; }
+ .col-24 { width: 24%; }
+ .col-25 { width: 25%; }
+ .col-26 { width: 26%; }
+ .col-27 { width: 27%; }
+ .col-28 { width: 28%; }
+ .col-29 { width: 29%; }
+ .col-30 { width: 30%; }
+ .col-31 { width: 31%; }
+ .col-32 { width: 32%; }
+ .col-33 { width: 33.33%; }
+ .col-34 { width: 34%; }
+ .col-35 { width: 35%; }
+ .col-36 { width: 36%; }
+ .col-37 { width: 37%; }
+ .col-38 { width: 38%; }
+ .col-39 { width: 39%; }
+ .col-40 { width: 40%; }
+ .col-41 { width: 41%; }
+ .col-42 { width: 42%; }
+ .col-43 { width: 43%; }
+ .col-44 { width: 44%; }
+ .col-45 { width: 45%; }
+ .col-46 { width: 46%; }
+ .col-47 { width: 47%; }
+ .col-48 { width: 48%; }
+ .col-49 { width: 49%; }
+ .col-50 { width: 50%; }
+ .col-51 { width: 51%; }
+ .col-52 { width: 52%; }
+ .col-53 { width: 53%; }
+ .col-54 { width: 54%; }
+ .col-55 { width: 55%; }
+ .col-56 { width: 56%; }
+ .col-57 { width: 57%; }
+ .col-58 { width: 58%; }
+ .col-59 { width: 59%; }
+ .col-60 { width: 60%; }
+ .col-61 { width: 61%; }
+ .col-62 { width: 62%; }
+ .col-63 { width: 63%; }
+ .col-64 { width: 64%; }
+ .col-65 { width: 65%; }
+ .col-66 { width: 66.66%; }
+ .col-67 { width: 67%; }
+ .col-68 { width: 68%; }
+ .col-69 { width: 69%; }
+ .col-70 { width: 70%; }
+ .col-71 { width: 71%; }
+ .col-72 { width: 72%; }
+ .col-73 { width: 73%; }
+ .col-74 { width: 74%; }
+ .col-75 { width: 75%; }
+ .col-76 { width: 76%; }
+ .col-77 { width: 77%; }
+ .col-78 { width: 78%; }
+ .col-79 { width: 79%; }
+ .col-80 { width: 80%; }
+ .col-81 { width: 81%; }
+ .col-82 { width: 82%; }
+ .col-83 { width: 83%; }
+ .col-84 { width: 84%; }
+ .col-85 { width: 85%; }
+ .col-86 { width: 86%; }
+ .col-87 { width: 87%; }
+ .col-88 { width: 88%; }
+ .col-89 { width: 89%; }
+ .col-90 { width: 90%; }
+ .col-91 { width: 91%; }
+ .col-92 { width: 92%; }
+ .col-93 { width: 93%; }
+ .col-94 { width: 94%; }
+ .col-95 { width: 95%; }
+ .col-96 { width: 96%; }
+ .col-97 { width: 97%; }
+ .col-98 { width: 98%; }
+ .col-99 { width: 99%; }
+ .col-100 { width: 100%; }
+ 
+ .push-5 { left: 5% !important; }
+ .push-10 { left: 10% !important; }
+ .push-15 { left: 15% !important; }
+ .push-20 { left: 20% !important; }
+ .push-25 { left: 25% !important; }
+ .push-30 { left: 30% !important; }
+ .push-33 { left: 33.33% !important; }
+ .push-35 { left: 35% !important; }
+ .push-40 { left: 40% !important; }
+ .push-45 { left: 45% !important; }
+ .push-50 { left: 50% !important; }
+ .push-60 { left: 60% !important; }
+ .push-66 { left: 66.66% !important; }
+ .push-70 { left: 70% !important; }
+ .push-75 { left: 75% !important; }
+ .push-80 { left: 80% !important; }
+ .push-90 { left: 90% !important; }
+ .push-100 { left: 100% !important; }
+ 
+ .pull-5 { left: -5% !important; }
+ .pull-10 { left: -10% !important; }
+ .pull-15 { left: -15% !important; }
+ .pull-20 { left: -20% !important; }
+ .pull-25 { left: -25% !important; }
+ .pull-30 { left: -30% !important; }
+ .pull-35 { left: -35% !important; }
+ .pull-33 { left: -33.33% !important; }
+ .pull-40 { left: -40% !important; }
+ .pull-45 { left: -45% !important; }
+ .pull-50 { left: -50% !important; }
+ .pull-60 { left: -60% !important; }
+ .pull-66 { left: -66.66% !important; }
+ .pull-70 { left: -70% !important; }
+ .pull-75 { left: -75% !important; }
+ .pull-80 { left: -80% !important; }
+ .pull-90 { left: -90% !important; }
+ .pull-100 { left: -100% !important; }
+ 
+ 
+ 
+ 
+
+
+
+
+ /*********************************************
+ * Custom CSS
+ *********************************************/
+
+ /* Image Placement */
+ img.bottom-right {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+img.bottom-left {
+  position: fixed;
+  bottom: 5%;
+  left: 0%;
+}
+
+img.top-left {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+}
+
+img.top-right {
+  position: fixed;
+  top: 5%;
+  right: ;
+}
+
+/* Placing text at the top center of the page.  Can give weird behavior upon loading  */
+
+h1.top,
+h2.top,
+h3.top{
+    position: fixed;  
+    text-align: center;
+    top: 0%;
+    width: 100%;
+    color: var(--dark-blue);
+}
+
+/* Title attributes for h's. Changes color and increasese bottom margin */
+
+h1.title,
+h2.title,
+h3.title{
+    text-align: center;
+    color: var(--dark-blue);
+    margin-bottom: 1.4vmin;
+}
+
+/* Div placements  */
+
+div.bottom{
+  position: fixed;  
+  text-align: center;
+  bottom: 0%;
+  width: 100%;
+}
+
+div.right{
+  position: fixed;
+  width: 95%;
+  top: 55%;
+  left: 50%;
+}
+
+
+
+
+
+
+/* Centering images above one another */
+
+.reveal ul.vertical-images li{
+  list-style-type: none;
+}
+
+
+
+/* Rotated vertical text */
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+/* Grayed out text */
+
+.grey-text {
+  color: var(--faded-grey);
+}
+
+/* Black box surrounding object */
+
+.boxed-black{
+  border: 0.04vmin solid black ;
+}
+
+/* Red box surrounding object */
+
+.boxed-red{
+  border: 0.04vmin solid red ;
+}
+
+/* Increased ul, ol line spacing */
+
+ol.more-li-space li,
+ul.more-li-space li{
+  margin: 5vmin 0;
+}
+
+
+ol.li-space li,
+ul.li-space li{
+  margin: 3vmin 0;
+}
+
+/* Removing capslock for h's*/
+
+h1.no-caps,
+h2.no-caps,
+h3.no-caps,
+h4.no-caps,
+h5.no-caps {
+  text-transform: none;
+}
+
+/* Shrinking everything within a div */
+
+div.shrink-95 {
+-webkit-transform:scale(0.95);
+-moz-transform:scale(0.95);
+-ms-transform:scale(0.9);
+transform:scale(0.95);
+}
+
+div.shrink-90 {
+  -webkit-transform:scale(0.90);
+  -moz-transform:scale(0.90);
+  -ms-transform:scale(0.90);
+  transform:scale(0.90);
+  }
+
+div.shrink-85 {
+  -webkit-transform:scale(0.85);
+  -moz-transform:scale(0.85);
+  -ms-transform:scale(0.85);
+  transform:scale(0.85);
+  }
+
+  div.shrink-80 {
+    -webkit-transform:scale(0.80);
+    -moz-transform:scale(0.80);
+    -ms-transform:scale(0.80);
+    transform:scale(0.80);
+    }
+
+div.shrink-75 {
+    -webkit-transform:scale(0.75);
+    -moz-transform:scale(0.75);
+    -ms-transform:scale(0.75);
+    transform:scale(0.75);
+    }
+
+    div.shrink-70 {
+      -webkit-transform:scale(0.70);
+      -moz-transform:scale(0.70);
+      -ms-transform:scale(0.70);
+      transform:scale(0.70);
+      }
+
+
+
+
+
+  /* Extra margin around p's */
+
+  p.extra-margins {
+    margin-top: 7vmin;
+    margin-bottom: 7vmin;
+  }
+
+  /* Reduced top margin */
+
+  .top-margin-reduced {
+    margin-top: -5.6vmin;
+  }
+
+    /* Reduced bottom margin */
+
+    .bottom-margin-reduced {
+      margin-bottom: -5.6vmin;
+    }
+
+  /* styling for including citations */
+
+  cite {
+    color: var(--crimson-red);
+    font-size: 3vmin;
+    font-family: 'Gentium Book Basic', serif;
+  }
+
+/* putting a black border around an element */
+
+ /* black border */
+
+ .black-border {
+  border: .14vmin solid black;
+  padding: .7vmin 0vmin .7vmin 0vmin;
+}
+
+
+/* special text size and color for name on title */
+
+.reveal name {
+  font-size: 6vmin;
+  color: var(--dark-blue);
+  font-weight: bold; }
+
+
+  /* aligning images via their vertical center  */
+
+  div.vert-align{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

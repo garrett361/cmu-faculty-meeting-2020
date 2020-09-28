@@ -1,0 +1,162 @@
+<section id="proof-0">
+    <h1 class="no-caps title">
+        Proof
+    </h1>
+
+
+    <h2 class="no-caps title">
+        \(\Delta M_{\rm ext}\approx -T\Delta S \)
+    </h2>
+
+    <br>
+
+    <h2 class="no-caps title">
+        <a href="http://arxiv.org/abs/arXiv:1909.05254" target="_blank"><cite>[Goon & Penco, 1909.05254]</cite></a>
+    </h2>
+
+
+
+
+
+
+</section>
+
+<section id="proof-1">
+    <h2 class="no-caps title">
+        Heuristic Argument for \(\Delta M_{\rm ext}\propto -\Delta S\)
+    </h2>
+
+    <p>Technical steps straightforward, but first a plausibility argument</p>
+
+    <div class="row no-margin-top">
+        <div class="col-50 no-margin-top">
+            <ul class="colored li-space">
+                <li>Say \(\Delta M_{\rm ext} < 0 \) </li>
+                <li>Roughly, microscopic energy levels have shifted down</li>
+                <li>\(\Delta S\) is change at fixed \(M\)</li>
+                <li>Downward shift in energies \(\implies\) more ways of making state \(M\), \(\Delta S>0\)</li>
+                <li>Opposite for \(\Delta M_{\rm ext}>0\) </li>
+            </ul>
+        </div>
+        <div class="col-50 no-margin-top">
+            <img width="70%" src="slides/figures/EnergyLevels.svg">
+        </div>
+
+</section>
+
+
+
+<section id="proof-2">
+    <h2 class="no-caps title">
+        Technical Argument: Outline
+    </h2>
+
+    <p>
+        <hlight>Basic Idea</hlight>: Treat EFT parameters \(\epsilon\) as additional thermo. variables
+    </p>
+
+    <p class="extra-margins">
+        Microscopically: \(\mathcal{L}_{0}\longrightarrow
+        \mathcal{L}_{0}+\epsilon\Delta\mathcal{L}\)<br>
+        Thermodynamically: \((S,M,\Qvec)\longrightarrow (S,M,\Qvec,\epsilon)\)
+    </p>
+
+    <p class="extra-margins">
+        <hlight>Strategy:</hlight> Characterize changes via \(\partial_{\epsilon} M_{\rm ext}(\Qvec,\epsilon)\) and \(\partial_{\epsilon}
+        S(M,\Qvec,\epsilon)\)
+    </p>
+
+    <p class="extra-margins">
+        <hlight>In Practice:</hlight> Use \(G=M-TS-\mvec\cdot\Qvec=G_{0}(\mvec,T)+\epsilon \Delta G(\mvec,T)\)
+    </p>
+
+    <p class="extra-margins">
+        <hlight>Find:</hlight> \(\partial_{\epsilon} M\propto \partial_{\epsilon} S\propto \Delta G\)
+    </p>
+
+    <p>
+        LO calculation above is typical use case, but relation holds at all order in \(\epsilon\) <br>
+        <a href="https://arxiv.org/abs/1912.11161" target="_blank"><cite>[Cremonini et al., 1912.11161]</cite></a>
+    </p>
+
+</section>
+
+
+
+<section id="proof-3">
+    <h2 class="no-caps title">
+        Computing \(\partial_{\epsilon} M_{\rm ext}(\Qvec,\epsilon)\)
+    </h2>
+
+    <p class="shrink-80">
+        <hlight>Entire Proof:</hlight> Chain rule and thermodynamic identities repeatedly
+    </p>
+
+    <div class="shrink-80">
+        \[ \require{enclose}
+        \begin{align}
+        \left(\frac{\partial M}{\partial
+        \epsilon}\right)_{T,\Qvec}&=\left(\partial_{\epsilon}\left(G+TS+\mvec\cdot\Qvec\right)\right)_{T,\Qvec}
+        =\Delta G(T,\mvec)+T\left(\frac{\partial S}{\partial \epsilon}\right)_{T,\Qvec}
+        \end{align}
+        \]
+    </div>
+
+    <p>
+        We are interested in \(\partial_{\epsilon}M_{\rm
+        ext}(\Qvec,\epsilon)=\partial_{\epsilon}M(T,\Qvec,\epsilon)\Big|_{T=0}\)
+    </p>
+
+    <p>
+        <hlight>Third Law Assumption:</hlight> 
+        \(\lim _{T\to 0}S(T,\Qvec,\epsilon)={\rm const}\)
+    </p>
+
+    <p> Final term vanishes above:</p>
+
+    <div>
+        \[
+        \bbox[5px, border: 2px solid red]{\partial_{\epsilon}M_{\rm ext}(\Qvec,\epsilon)=\Delta G(T,\mvec)\Big|_{T=0}}
+        \]
+    </div>
+
+
+
+</section>
+
+
+<section id="proof-4">
+    <h2 class="no-caps title">
+        Computing \(\partial_{\epsilon} S(M,Q,\epsilon)\) <cite>[Reall and Santos, 1901.11535]</cite>
+    </h2>
+
+    <p class="top-margin-reduced bottom-margin-reduced"> Essentially the same as \(\partial_{\epsilon}M_{\rm ext}\).
+        Identities + Chain Rule</p>
+
+    <div class="shrink-80 top-margin-reduced bottom-margin-reduced">
+        \[ \require{enclose}
+        \begin{align}
+        \beta \Delta G&=\left(\frac{\partial \beta G}{\partial\epsilon }\right)_{T,\mvec}=\beta\left(\frac{\partial
+        M}{\partial \epsilon}\right)_{T,\mvec}-\beta\mvec\cdot\left(\frac{\partial \Qvec }{\partial
+        \epsilon}\right)_{T,\mvec}-\left(\frac{\partial S}{\partial \epsilon}\right)_{T,\mvec}\nn
+        &=-\left(\frac{\partial S}{\partial \epsilon}\right)_{M,\Qvec}  \quad ({\rm Using \ Identities})
+        \end{align}
+        \]
+    </div>
+
+    <p class="top-margin-reduced bottom-margin-reduced">
+        <hlight>Combining:</hlight> Exact Result
+    </p>
+
+    <div class="shrink-80">
+        \[
+        \bbox[5px, border: 2px solid red]{\partial_{\epsilon}M_{\rm ext}(\Qvec,\epsilon)=\lim_{T\to
+        0}-T\left(\frac{\partial S}{\partial \epsilon}\right)_{M,\Qvec}}
+        \]
+    </div>
+
+    <p>
+        Totally arbitrary \(\Qvec\), completely general
+    </p>
+
+</section>

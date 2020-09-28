@@ -1,0 +1,31 @@
+\documentclass[crop,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+
+%Call with pdflatex --shell-escape to simultaneously produce pdf and svg.  Can configure texmaker to do this automatically
+
+%Import custom tikzlines.sty file which loads tikz, additional tikz-dependencies and defines custom curves styles
+\usepackage{tikzlines}
+
+
+\begin{document}
+    \begin{tikzpicture}
+    
+    \draw[gray, line width=1.1pt] (-3,0) -- (3,0);
+\node at (0,-2.05) [vertex,line width=.8pt,minimum size=.5cm](vertex) {};
+\node at (-1.6,-1) [mix,line width=.8pt,line width=.7pt,minimum size=.3cm](mixL) {};
+\node at (-1.6,-1) [cross,minimum size=.2cm](mixLx) {};
+\node at (.7,-1) [mix,line width=.8pt,line width=.7pt,minimum size=.3cm](mixC) {};
+\node at (.7,-1) [cross,minimum size=.2cm](mixCx) {};
+%\node at (1.7,-1) [mix,line width=.8pt,line width=.7pt,minimum size=.3cm](mixR) {};
+%\node at (1.7,-1) [cross,minimum size=.2cm](mixRx) {};
+\node at (-1.7,0) [smalldot,minimum size=.05cm](dotL) {};
+\node at (.75,0) [smalldot,minimum size=.05cm](dotC) {};
+\node at (1.7,0) [smalldot,minimum size=.05cm](dotR) {};
+\path[]
+	(mixL) edge[bend right,pmfield,line width=1.2 pt] node {} (vertex)
+    (vertex) edge[bend right=15,pmfield,line width=1.2 pt] node  {} (mixC)
+    (vertex) edge[bend right=40,graviton,line width=1.2 pt] node  {} (dotR)
+	(dotL) edge[graviton,line width=1.2 pt,bend right=10] node {} (mixL)
+    (dotC) edge[graviton,line width=1.2 pt] node {} (mixC);
+    
+    \end{tikzpicture}
+\end{document}

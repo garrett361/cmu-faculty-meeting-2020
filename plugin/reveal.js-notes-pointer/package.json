@@ -1,0 +1,50 @@
+{
+  "_from": "reveal.js-notes-pointer",
+  "_id": "reveal.js-notes-pointer@0.1.4",
+  "_inBundle": false,
+  "_integrity": "sha512-eN0wkoghzxML6ZaLbaFhtgX4NbeT1/ig3bsgrxah72bwYUAyrsrGDxEQqGM9WsUFvOc8E6sa2hkuwEdKKCPSeA==",
+  "_location": "/reveal.js-notes-pointer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "reveal.js-notes-pointer",
+    "name": "reveal.js-notes-pointer",
+    "escapedName": "reveal.js-notes-pointer",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/reveal.js-notes-pointer/-/reveal.js-notes-pointer-0.1.4.tgz",
+  "_shasum": "5783afbf7f3d0c1b730a3007e819e76220007069",
+  "_spec": "reveal.js-notes-pointer",
+  "_where": "/home/garrett/GitHub/talks/edinburgh-empg-2020",
+  "author": {
+    "name": "Dougal J. Sutherland",
+    "email": "dougal@gmail.com",
+    "url": "http://dougal.me"
+  },
+  "bugs": {
+    "url": "https://github.com/dougalsutherland/reveal.js-notes-pointer/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A version of the reveal.js notes plugin with a cursor pointer.",
+  "files": [
+    "notes-pointer.js",
+    "notes.html",
+    "lib/marked.min.js"
+  ],
+  "homepage": "https://github.com/dougalsutherland/reveal.js-notes-pointer",
+  "license": "MIT",
+  "name": "reveal.js-notes-pointer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougalsutherland/reveal.js-notes-pointer.git"
+  },
+  "version": "0.1.4"
+}

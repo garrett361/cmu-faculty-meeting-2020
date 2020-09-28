@@ -1,0 +1,284 @@
+<section id="additional-0">
+    <h1 class="no-caps title">
+        Additional Slides
+    </h1>
+
+</section>
+
+
+<section id="RN-BH-Example-1">
+    <h2 class="no-caps title">
+        Explicit Example: RN Black Holes
+    </h2>
+
+    <div>
+        \[
+        I[g_{\mu\nu},A_{\mu}]=\frac{1}{16\pi}\int\rd^{4}x\sqrt{-g}\,\left[R-F^2+\epsilon F^{4}\right]
+        \]
+    </div>
+
+    <p>The thermodynamic potential</p>
+
+    <div>
+        \[
+        G_{0}(\mu,T)=\frac{(1-\mu^{2})^{2}}{16\pi T}\ , \quad \Delta G(\mu,T)=-\frac{4\pi
+        \epsilon}{5}\frac{T\mu^{4}}{(1-\mu^{2})}
+        \]
+    </div>
+
+    <p>Compute \(\Delta M_{\rm ext}\) using \(\mu(Q,T)\approx 1-2\pi Q T\) at small T</p>
+
+    <div>
+        \[
+        \Delta M_{\rm ext}=\lim_{T\to 0}\Delta G\left(\mu(Q,T),T\right)=-\frac{\epsilon}{5Q}
+        \]
+    </div>
+
+
+
+</section>
+
+
+
+
+<section id="RN-BH-Example-2">
+    <h2 class="no-caps title">
+        Explicit Example: RN Black Holes
+    </h2>
+
+    <div class="shrink-80">
+        \[
+        I[g_{\mu\nu},A_{\mu}]=\frac{1}{16\pi}\int\rd^{4}x\sqrt{-g}\,\left[R-F^2+\epsilon F^{4}\right]
+        \]
+    </div>
+
+    <p>Compute \(T_0\), \(\Delta S\) at \(M=Q\times (1+\delta)\)</p>
+
+    <div>
+        \[
+        T_0=\frac{1}{Q\pi}\sqrt{\frac{\delta}{2}}\ , \quad \Delta S=\frac{\sqrt{2}\pi \epsilon}{5\sqrt{\delta}}
+        \]
+    </div>
+
+    <p> Combining results:</p>
+
+    <div>
+        \[
+        -T_0\Delta S\Big|_{M\approx Q}\approx-\frac{\epsilon}{5Q}=\Delta M_{\rm ext}(Q)
+        \]
+    </div>
+
+    <p>
+        <hlight>Explicit metric-based calcluations give full agreement</hlight>
+    </p>
+
+
+
+</section>
+
+
+
+<section id="Zero-T-1">
+
+    <div class="extra-margins">
+        <h2 class="no-caps title">
+            Non-Analyticity and the \(T\longrightarrow 0\) Limit
+        </h2>
+
+        <p>
+            The zero-\(T\) limit generically contains non-analyticities, as seen from
+        </p>
+
+        <div class="shrink-70">
+            \[
+            \lim_{T\to 0}\left(\frac{\partial M}{\partial \epsilon}\right)_{T,\Q}=\lim_{T\to 0}-T\left(\frac{\partial
+            S}{\partial \epsilon}\right)_{M,\Q}
+            \]
+        </div>
+
+        <p>
+            \(\left(\frac{\partial
+            S}{\partial \epsilon}\right)_{M,\Q}\) must diverge as \(T^{-1}\) at low-\(T\), though \(S(M,\Q,\epsilon)\)
+            needn't
+        </p>
+
+        <p>
+            Related: when \(\Delta T(M,\Q)\) is comparable to \(T_0(M,\Q)\),
+            \(S\) may not be analytic in \(\epsilon\).
+        </p>
+
+        <p>
+            \(\Delta M\approx -T_0\Delta S\) derived for \(\Delta T\ll T_0\) where
+            analytic \(S\approx S_0+\epsilon\Delta S\)
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="Zero-T-2">
+
+    <div >
+        <h2 class="no-caps title">
+            Non-Analyticity and the \(T\longrightarrow 0\) Limit
+        </h2>
+
+        <p>
+            Non-analyticity in \(\epsilon\) is physically sensible.
+        </p>
+
+        <p>
+            <hlight>Expect:</hlight> unperturbed extremal state continues to exist only for one sign of \(\epsilon\)
+        </p>
+
+        <p>
+            Some typical forms of low-\(T\) corrections: <a href="https://arxiv.org/abs/1910.14324" target="_blank"><cite>[Cano et al., 1910.14324]</cite></a>:
+            <div class="shrink-80">
+                \[
+                S(M,\Q,\epsilon)\approx S^{0}_{\rm ext.}(\Q)+F(M,\Q)\sqrt{M-M_{\rm ext}^{0}(\Q)+\epsilon}
+                \]
+            </div>
+        </p>
+
+        <p>
+            The unperturbed extremal state \(M=M_{\rm ext}^{0}(\Q)\) only has real entropy for \(\epsilon>0\)
+        </p>
+
+        <p>
+            Whether \(S\) has analytic expansion in \(\epsilon\) depends on \(\frac{M-M_{\rm ext}^{0}}{M}\), or equivalently on \(\frac{T-T_{0}}{T}\)
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="Zero-T-3">
+
+    <div >
+        <h2 class="no-caps title">
+            Non-Analyticity and the \(T\longrightarrow 0\) Limit
+        </h2>
+
+        <p>
+            Some typical forms of low-\(T\) corrections: <a href="https://arxiv.org/abs/1910.14324" target="_blank"><cite>[Cano et al., 1910.14324]</cite></a>:
+            <div class="shrink-80">
+                \[
+                S(M,\Q,\epsilon)\approx S^{0}_{\rm ext.}(\Q)+F(M,\Q)\sqrt{M-M_{\rm ext}^{0}(\Q)+\epsilon}
+                \]
+            </div>
+        </p>
+
+        <p>
+            For \(\Delta M\approx -T_0\Delta S\), work at \(M=(1+\delta)\times M_{\rm ext}^{0}\) with \(0<\delta \ll 1\) while maintaining \(\Delta T\ll T_0(M,\Q)\), which are <hlight>opposing constraints</hlight>
+        </p>
+
+        <p class="shrink-80">
+                \[
+                S(M,\Q,\epsilon)\approx S^{0}_{\rm ext.}(\Q)+F(M,\Q)\sqrt{M_{\rm ext}^{0}(\Q)\times \delta+\epsilon}
+                \]
+        </p>
+
+        <p>\(\Delta M\approx -T_0\Delta S\) holds for \(|\epsilon|\gg M_{\rm ext}\delta\)</p>
+        <p>Changed to \(\Delta M\approx -\frac{1}{2}T_0\Delta S\) holds for \(|\epsilon|\ll M_{\rm ext}\delta\)</p>
+        <p>Both sides computed at leading order in \(\delta,\epsilon\)</p>
+
+
+    
+        
+    </div>
+
+</section>
+
+
+
+
+<section id="Degeneracy-1">
+    <h2 class="no-caps title">
+        \(\Delta S>0 \implies ?\)
+    </h2>
+
+    <p class="extra-margins">
+        If \(\Delta S>0\), then \(\partial_{\epsilon}M_{\rm ext}=-T\partial_{\epsilon}S\) suggests \(\Delta M_{\rm
+        ext}>0\)
+    </p>
+
+    <p class="extra-margins">
+        This reasoning first used in <a href="https://arxiv.org/abs/1801.08546" target="_blank"><cite>[Cheung, Remmen,
+                Liu, 1801.08546]</cite></a> as evidence for WGC
+    </p>
+
+
+    <p class="extra-margins">
+        <hlight>Degenerate Counterexamples:</hlight> Only suggestive, not a proof.
+    </p>
+
+    <p>
+        \(\partial_{\epsilon}M_{\rm ext}=-T\partial_{\epsilon}S\) can degenerate to \(0=0\) with \(\Delta S\neq 0\)
+    </p>
+
+    <p >
+        <hlight>Example:</hlight> \(\Delta \mathcal{L}=\mathcal{L}_{\rm GB}=R_{\mu\nu\rho\sigma}^2-4R_{\mu\nu}^2+R^2\)
+        <a href="https://arxiv.org/abs/1909.08530" target="_blank"><cite>[Cano et al, 1909.08530]</cite></a>
+    </p>
+
+    <p >
+        Total derivative changes \(S\), but not \(M(T,\Q)\)
+    </p>
+    
+    <p>
+        Approx. \(\Delta M\approx -T_{0}\Delta S\) relation also trivial at zeroth order in \(\delta=\frac{M}{M_{\rm ext}^{0}}-1\)
+    </p>
+
+
+
+</section>
+
+
+<section id="Degeneracy-2">
+    <h2 class="no-caps title">
+        Degenerate Cases
+    </h2>
+
+    <p> Sometimes relation reads \(0=0\)</p>
+
+    <p> Non-generic: \(\Delta M=T=0\) and \(\Delta S\neq 0\)</p>
+
+
+    <img width="50%" src="slides/figures/2DGasBump.svg">
+    <p class="extra-margins"> Non-generic: \(\Delta M=T=0\) and \(\Delta S\neq 0\)</p>
+
+    <p>
+        <hlight>Above:</hlight> No change in miniumum mass, but \(\Delta S\neq 0\)
+    </p>
+
+
+</section>
+
+
+
+<section id="Degeneracy-3">
+    <h2 class="no-caps title">
+        Degenerate Cases
+    </h2>
+
+
+    <p class="extra-margins">
+        A gravitational example: the Gauss-Bonnet term <a href="https://arxiv.org/abs/1909.08530"
+            target="_blank"><cite>[Cano et al, 1909.08530]</cite></a>
+    </p>
+
+    <div>
+        \[
+        I=\frac{1}{16\pi}\int\rd^{4}x \sqrt{-g}\,\left(R-F^2+\lambda\left(R_{\mu\nu\rho\sigma}^{2}-4R_{\mu\nu}^{2}+R^{2}
+        \right)\right)
+        \]
+    </div>
+
+    <p class="extra-margins"> Total derivative doesn't change EOM, but does change <hlight>value</hlight> of \(I\)</p>
+
+    <p class="extra-margins"> Ends up generating \(\Delta S\neq 0\) while keeping \(M=Q\) at extremality</p>
+
+
+</section>

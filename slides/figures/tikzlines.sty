@@ -1,0 +1,49 @@
+% Tikz Lines
+% Modified from Flip Tanedo's original
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,patterns}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows} 				% For commutative diagram
+											% http://www.felixl.de/commu.pdf
+\usetikzlibrary{positioning}				% For "above of=" commands
+\usetikzlibrary{calc,through}				% For coordinates
+\usetikzlibrary{decorations.pathreplacing}  % For curly braces
+\usepackage[tikz]{bclogo} 					% For cute logo boxes
+\usepackage{pgffor}							% For repeating patterns
+
+
+\definecolor{gravitoncolor}{RGB}{15,15,120} %custom color for graviton lines
+\definecolor{photoncolor}{RGB}{255,255,0} %custom color for photon lines
+\definecolor{pmfieldcolor}{RGB}{120,15,15}  %custom color for pm lines
+\definecolor{lightbluegray}{RGB}{240,240,240}  %custom color for vertex box fill
+
+\usepackage{amssymb}%math symbols
+
+\usetikzlibrary{decorations.pathmorphing}	% For Feynman Diagrams
+\usetikzlibrary{decorations.markings}
+\tikzset{
+%% Different kind of arrows
+	jagged/.style={decorate, decoration={zigzag,segment length =2pt, amplitude = 1pt}, draw,red},
+    electron/.style={{decoration={markings,mark=at position .5 with {\arrow{latex'}}},postaction={decorate}}},
+    graviton/.style={decorate, decoration={snake}, draw,gravitoncolor},
+    photon/.style={decorate, decoration={snake}, draw,photoncolor},
+    photonborder/.style={decorate, decoration={snake}, draw,black},
+    pmfield/.style={decorate,
+        decoration={coil,amplitude=4pt, segment length=5.5pt},pmfieldcolor},
+% kinds of nodes
+	vertex/.style={circle,draw=black,fill=black!30!white,inner sep=0pt},
+	smalldot/.style={circle,draw=black,fill=black,inner sep=0pt},
+	mix/.style={circle,draw=black,fill=gray,inner sep=0pt},
+% define crosses	
+cross/.style={cross out, draw=black, minimum size=.2cm, inner sep=0pt, outer sep=0pt},
+}
+
+
+%new commands
+
+\newcommand{\rd}{{\rm d}}
+\newcommand{\MP}{M_{p}}
+\newcommand{\Q}{{\cal Q}}
+\newcommand{\Qvec}{\vec{\cal Q}}
