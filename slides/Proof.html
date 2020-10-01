@@ -14,12 +14,114 @@
         <a href="http://arxiv.org/abs/arXiv:1909.05254" target="_blank"><cite>[Goon & Penco, 1909.05254]</cite></a>
     </h2>
 
+</section>
 
 
 
+<section id="proof-setup">
+    <h2 class="no-caps title">
+        Focus: \(\Delta M \) and \(\Delta S \)
+    </h2>
+
+
+    <p>
+        States characterized by \(M,S\) and other parameters \(\Qvec\)
+    </p>
+
+    <p>
+        Keep \(\Qvec\) <hlight>fixed in all comparisons</hlight>
+    </p>
+
+
+
+    <p>
+        <hlight>Question 1:</hlight> Take a state \( (M,\Qvec)\) which exists in both theories. <br>
+
+    </p>
+
+    <p>
+        <em>
+            How does the entropy of state \( (M,\Qvec)\) change? <hlight>\(\Delta S\)</hlight>
+        </em>
+    </p>
+
+    <div class="fragment">
+        <p>
+            <hlight>Question 2:</hlight> Fix \(\Qvec\) and study minimum energy, \(T\longrightarrow 0\) regime.
+        </p>
+
+        <p>
+            <em>
+                How does this minimum energy change? <hlight>\(\Delta M_{\rm ext}\)</hlight>
+            </em>
+        </p>
+
+        <p>
+            Will show \(\Delta M_{\rm ext}\propto -\Delta S\)
+        </p>
+
+
+    </div>
 
 
 </section>
+
+<!-- 
+<section id="proof-setup-detail">
+    <h2 class="no-caps title">
+        \(\Delta M \) and \(\Delta S \): More Detail
+    </h2>
+
+
+
+    <p>
+        <hlight>Question 1:</hlight>
+        <em>
+            How does the entropy of state \( (M,\Qvec)\) change?
+        </em>
+    </p>
+
+    <div>
+        \[
+        S_0(M,\Qvec) \longrightarrow S_0(M,\Qvec) +\bbox[5px, border: 2px solid red]{\Delta S (M,\Qvec)}
+        \]
+    </div>
+
+
+    <p>
+        <hlight>Question 2:</hlight>
+        <em>
+            How does minimum energy of state \(\Qvec\) change?
+        </em>
+    </p>
+
+    <div>
+        \[
+        M_{\rm ext}(\Qvec)\equiv \lim _{T\to 0} M(\Qvec,T)
+        \]
+    </div>
+
+
+    <p>\( M_{\rm ext}(\Qvec)\) is lowest possible energy. <hlight>"Extremality Bound"</hlight>
+    </p>
+
+    <div>
+        \[
+        M_{\rm ext}^{0}(\Qvec) \longrightarrow M_{\rm ext}^{0}(\Qvec) +\bbox[5px, border: 2px solid red]{\Delta
+        M_{\rm
+        ext} (\Qvec)}
+        \]
+    </div>
+
+
+    </div>
+
+
+
+</section> -->
+
+
+
 
 <section id="proof-1">
     <h2 class="no-caps title">
@@ -62,7 +164,8 @@
     </p>
 
     <p class="extra-margins">
-        <hlight>Strategy:</hlight> Characterize changes via \(\partial_{\epsilon} M_{\rm ext}(\Qvec,\epsilon)\) and \(\partial_{\epsilon}
+        <hlight>Strategy:</hlight> Characterize changes via \(\partial_{\epsilon} M_{\rm ext}(\Qvec,\epsilon)\) and
+        \(\partial_{\epsilon}
         S(M,\Qvec,\epsilon)\)
     </p>
 
@@ -108,7 +211,7 @@
     </p>
 
     <p>
-        <hlight>Third Law Assumption:</hlight> 
+        <hlight>Third Law Assumption:</hlight>
         \(\lim _{T\to 0}S(T,\Qvec,\epsilon)={\rm const}\)
     </p>
 
@@ -139,7 +242,7 @@
         \beta \Delta G&=\left(\frac{\partial \beta G}{\partial\epsilon }\right)_{T,\mvec}=\beta\left(\frac{\partial
         M}{\partial \epsilon}\right)_{T,\mvec}-\beta\mvec\cdot\left(\frac{\partial \Qvec }{\partial
         \epsilon}\right)_{T,\mvec}-\left(\frac{\partial S}{\partial \epsilon}\right)_{T,\mvec}\nn
-        &=-\left(\frac{\partial S}{\partial \epsilon}\right)_{M,\Qvec}  \quad ({\rm Using \ Identities})
+        &=-\left(\frac{\partial S}{\partial \epsilon}\right)_{M,\Qvec} \quad ({\rm Using \ Identities})
         \end{align}
         \]
     </div>
@@ -156,7 +259,53 @@
     </div>
 
     <p>
-        Totally arbitrary \(\Qvec\), completely general
+        Totally arbitrary \(\Qvec\), completely general.
+        <br>
+        Related approximate results hold away from extremality
+    </p>
+
+</section>
+
+
+
+<section id="proof-checks">
+    <h3 class="no-caps title">
+        Additional Checks
+    </h3>
+
+    <p>
+        Can check \(\partial_{\epsilon}M_{\rm ext}=-T\partial_{\epsilon}S|_{T=0}\) and approx. relations against:
+    </p>
+
+    <div class="row">
+        <div class="column">
+            <a href="https://arxiv.org/abs/1903.09156" target="_blank"><img width="50%"
+                    src="slides/figures/ref1.png"></a>
+        </div>
+        <div class="column">
+            <a href="https://arxiv.org/abs/1801.08546" target="_blank"> <img width="22%"
+                    src="slides/figures/ref6.png"></a>
+            <a href="https://arxiv.org/abs/1909.08530" target="_blank"><img width="22%"
+                    src="slides/figures/ref3.png"></a>
+            <a href="https://arxiv.org/abs/1910.14324" target="_blank"><img width="22%"
+                    src="slides/figures/ref4.png"></a>
+            <a href="https://arxiv.org/abs/2007.06582" target="_blank"><img width="22%"
+                    src="slides/figures/ref10.png"></a>
+        </div>
+        <div class="column">
+            <a href="https://arxiv.org/abs/1909.01352" target="_blank"><img width="22%"
+                    src="slides/figures/ref5.png"></a>
+            <a href="https://arxiv.org/abs/1901.11535" target="_blank"><img width="22%"
+                    src="slides/figures/ref2.png"></a>
+            <a href="https://arxiv.org/abs/1912.11161" target="_blank"><img width="22%"
+                    src="slides/figures/ref7.png"></a>
+            <a href="https://arxiv.org/abs/2009.00015" target="_blank"><img width="22%"
+                    src="slides/figures/ref7.png"></a>
+        </div>
+    </div>
+
+    <p>
+        Among others. <hlight>Perfect agreement.</hlight>
     </p>
 
 </section>

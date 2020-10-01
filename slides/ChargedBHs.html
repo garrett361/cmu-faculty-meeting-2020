@@ -6,164 +6,142 @@
 
 <section id="chargedbhs-1">
     <h2 class="no-caps title">
-        Review of Charged Black Holes
+        Black Hole Review
     </h2>
-    
-    <p>GR admits very simple charged solutions:</p>
 
     <div>
         \[
-            I_{0}[g_{\mu\nu},A_{\mu}]=-\frac{1}{16\pi}\int\rd^{4}x\sqrt{-g}\, \left(R-F_{\mu\nu}^2\right) \quad \quad \left(G_N=1\right)
+        I_{0}[g_{\mu\nu},A_{\mu}]=-\frac{1}{16\pi}\int\rd^{4}x\sqrt{-g}\, \left(R-F_{\mu\nu}^2\right) \quad \quad
+        \left(G_N=1\right)
         \]
     </div>
 
-    <div>
-        \[
-            \begin{gather}
-            g_{\mu\nu}\rd x^{\mu}\rd x^{\nu}=-\Delta \rd t^{2}+\Delta^{-1}\rd r^{2}+r^{2}\rd \Omega^{2}\ , \quad A_{\mu}\rd x^{\mu}=\frac{Q}{r}\rd t\nn
-            \Delta=\left(1-\frac{2M}{r}+\frac{Q^{2}}{r^{2}}\right)
-            \end{gather}
-        \]
-    </div>
+    <p>
+        <u>
+            Relevant Points
+        </u>
+    </p>
 
-    <p>\(M,Q\) determine horizon. <hlight>Must have</hlight> \(M>Q\), else <hlight>Naked Singularity</hlight></p>
-
-</section>
-
-<section id="chargedbhs-2">
-    <h2 class="no-caps title">
-        Review of Charged BH Thermodynamics
-    </h2>
-    
-    <p>Famously, black holes <hlight>behave thermodynamically</hlight></p>
-
-    <p>Temperature and Entropy given by</p>
-
-    <div>
-        \[
-            \begin{gather}
-                T_0(M,Q)=\frac{r_{+}-M}{2\pi r_{+}^{2}}\quad \quad S_{0}(M,Q)=\frac{\rm Area}{4}=\pi r_{+}^{2}\nn
-                r_{+}\equiv M+\sqrt{M^{2}-Q^{2}}
-            \end{gather}
-        \]
-    </div>
-
-    <p>Must again have \(M>Q\), otherwise \(T,S\) are <hlight>imaginary</hlight></p>
-
-    <p><hlight>Extremal Mass</hlight></p>
-
-    <div>
-        \[
-           M(Q,T)> \lim_{T\to 0}M(Q,T)=Q\equiv M_{\rm ext}^{0}(Q)
-        \]
-    </div>
+    <ul class="colored more-li-space">
+        <li>
+            BHs fully specified by mass, spin, charge: \(M,Q,J\)
+        </li>
+        <li>
+            Thermodynamic description: \(T, S,\ldots\)
+        </li>
+        <li>
+            <hlight>Entropy</hlight>: \(S=\frac{\rm Area}{4}\), depends on \(M,Q,J\)
+        </li>
+        <li>
+            When \(Q,J\neq 0\) there is a <hlight>minimum mass</hlight>: \(M>M_{\rm ext}(Q,J)\)
+        </li>
+    </ul>
 
 
 </section>
 
 
-<section id="chargedbhs-3">
-
+<section id="chargedbhs-changing-theory">
     <h2 class="no-caps title">
-        Possible EFT Black Hole Behaviors
+        Moving Away from GR
     </h2>
 
+    <p>
+        Change theory: \(\Delta \mathcal{L}\) from UV physics. Studied re: LIGO
+    </p>
 
-    <div class="row no-margin-top vert-align">
-        <div class="col-60 no-margin-top">
-            <p class="extra-margins"> <hlight>EFT</hlight> corrections \(\Delta\mathcal{L}\) change \(Q/M\) bound  </p>
-            <p class="extra-margins"> Deviations from GR at low-\(M\)  </p>
-            <p class="extra-margins"> <hlight>WGC:</hlight> \(\Delta M_{\rm ext}(Q)<0\)   </p>
-            <p class="extra-margins"> Promotes BH decay </p>
-            <p class="extra-margins"> Another viewpoint: plot applies to all states, not just BHs</p>
-        </div>
-        <div class="col-70 no-margin-top">
-            <img width="80%" src="slides/figures/WGCPlot.svg">
-        </div>
-    
-   
-        
+    <img width="40%" src="slides/figures/CRLHDTerms.png">
+
+
+    <p>
+        Relations between \(T,S,\ldots\) and \(M,Q,J\) altered
+    </p>
+
+
+    <ul class="colored more-li-space">
+        <li>
+            <hlight>Entropy</hlight>: \(S=\frac{\rm Area}{4}+({\rm other\ geometric \ factors})\)
+        </li>
+        <li>
+            <hlight>Minimum mass</hlight> is altered: \(M_{\rm ext}=M_{\rm ext}^{0}+\Delta M_{\rm ext}\)
+        </li>
+    </ul>
+
+    <p class="no-margin-top">
+        Corrections \(\Delta S, \Delta M_{\rm ext}\) are complicated functions of \(M,Q,J,c_i\)
+    </p>
+
+
+
 </section>
 
 
 
 <section id="chargedbhs-4">
     <h3 class="no-caps title">
-        Connecting \(\Delta M\) and \(\Delta S\) <a href="https://arxiv.org/abs/1801.08546" target="_blank"><cite>[Cheung, Remmen, Liu, 1801.08546]</cite></a>
+        Connecting \(\Delta M_{\rm ext}\) and \(\Delta S\) <a href="https://arxiv.org/abs/1801.08546"
+            target="_blank"><cite>[Cheung, Remmen, Liu, 1801.08546]</cite></a>
     </h3>
 
-    <p>
-        <hlight>Surprise:</hlight> \(\Delta M\) and \(\Delta S\) correlated.  Change action by:
-    </p>
-
-
-    <img width="50%" src="slides/figures/CRLHDTerms.png">
-
-    <p>Then compute how these change BH properties</p>
 
     <p>
-        <hlight>Steps</hlight>
-            <ul class="colored">
-                <li>Find how terms change the solution (complicated)</li>
-                <li>\(T(M,Q)\) determined by near-horizon properties</li>
-                <li>\(S(M,Q)\) determined by Wald's formula.  \(S\neq \frac{\rm Area}{4}\)</li>
-            </ul>
+        <hlight>Charged BHs</hlight>: \(\Delta M_{\rm ext}(Q,c_i)\) and \(\Delta S(M,Q,c_i)\). \(J=0\)
     </p>
-
-    
-</section>
-
-
-<section id="chargedbhs-5">
-    <h2 class="no-caps title">
-        Connecting \(\Delta M\) and \(\Delta S\) <a href="https://arxiv.org/abs/1801.08546" target="_blank"><cite>[Cheung, Remmen, Liu, 1801.08546]</cite></a>
-    </h2>
-
-    <p><hlight>Findings:</hlight> Corrections are complicated functions of \(M,Q,c_i\) </p>
 
     <img width="40%" src="slides/figures/CRLHDTerms.png">
 
-    <p>\(\Delta M=\Delta M(Q,c_i)\) and \(\Delta S=\Delta S(M,Q,c_i)\) </p>
 
-    <p class="extra-margins">But evaluating \(\Delta S\) near \(M\approx Q\), it becomes <hlight>proportional</hlight> to \(\Delta M_{\rm ext}\)</p>
+    <p>
+        <hlight>Surprise:</hlight> \(\Delta M\propto -\Delta S\) near minimal mass, \(M\approx Q\)
+    </p>
 
-    <p class="extra-margins">\(\bbox[5px, border: 2px solid red]{\Delta S\propto -\Delta M_{\rm ext}}\)</p>
-
-
-</section>
-
-<section id="chargedbhs-6">
-    <h2 class="no-caps title">
-        Connecting \(\Delta M\) and \(\Delta S\)
-    </h2>
-
-    <p>\(\bbox[5px, border: 2px solid red]{\Delta S\propto -\Delta M_{\rm ext}}\)</p>
+    <p>\(\bbox[5px, border: 2px solid red]{\Delta S\propto -\Delta M_{\rm ext}\Big|_{M\approx Q}}\)</p>
 
     <div>
         <blockquote>
-            "[It] is somewhat miraculous that the entropy constraint ... is literally equivalent to the extremality condition"
+            "[It] is somewhat miraculous that the entropy constraint ... is literally equivalent to the extremality
+            condition"
         </blockquote>
         <a href="https://arxiv.org/abs/1801.08546" target="_blank"><cite>[Cheung, Remmen, Liu, 1801.08546]</cite></a>
     </div>
 
     <p>
-        <hlight>Similar Phenomenological Findings</hlight>
-        <ul class="colored">
-            <li>Electrically charged BHs in arbitrary dimensions</li>
-            <li>Uncharged, spinning BHs <cite>[Reall and Santos, 1901.11535]</cite></li>
-            <li>Magnetically & electrically charged, spinning BHs (KN) <a href="https://arxiv.org/abs/1903.09156" target="_blank"><cite>[Cheung et al, 1903.09156]</cite></a></li>
-        </ul>
-    </p>
-
-    <p  class="fragment">
         <hlight>
-            All explained by universal thermodymamic relation:</hlight>
-         \(\Delta M_{\rm ext}\approx -T_0\Delta S\)
-        
+            <u>
+                Reveals new implications of HEP conjectures
+            </u>
+        </hlight>
     </p>
 
 
-    
 </section>
 
 
+
+
+<section id="chargedbhs-phenom">
+    <h3 class="no-caps title">
+        Connecting \(\Delta M_{\rm ext}\) and \(\Delta S\)
+    </h3>
+
+
+    <p>
+        <hlight>Similar Phenomenological Findings</hlight>
+
+    <ul class="colored more-li-space">
+        <li>Electrically charged BHs in <em>arbitrary dimensions</em> <a href="https://arxiv.org/abs/1801.08546" target="_blank"><cite>[Cheung, Remmen, Liu, 1801.08546]</cite></a></li>
+        <li>Uncharged, <em>spinning</em> BHs <cite>[Reall and Santos, 1901.11535]</cite></li>
+        <li><em>Magnetically</em> & electrically charged, spinning BHs (KN) <a href="https://arxiv.org/abs/1903.09156"
+                target="_blank"><cite>[Cheung et al, 1903.09156]</cite></a></li>
+    </ul>
+    <p>\(\Delta S\propto -\Delta M_{\rm ext}\Big|_{\approx {\rm minimum \ mass}}\) in all cases</p>
+    </p>
+
+    <p>
+        <hlight>
+            Crying out for a universal thermodymamic explanation
+        </hlight>
+    </p>
+
+
+</section>
