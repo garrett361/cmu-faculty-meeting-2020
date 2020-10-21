@@ -1,2 +1,2 @@
-# edinburgh-empg-2020
-Zoom talk for Edinburgh's EMPG, May 20, 2020. 
+# cmu-faculty-meeting-2020
+Zoom talk for cmu faculty meeting Oct 1 2020
